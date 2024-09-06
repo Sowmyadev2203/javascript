@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #div1{
+        border: 2px solid black;
+        height: 50vh;
+        width: 50vw;
+        text-align: center;
+    }
+    .md{
+            border: 5px solid rgb(199, 169, 169);
+            border-radius: 15px;
+            height: 55vh;
+            width: 20vw;
+            background-color: hsla(232, 57%, 33%, 1);
+
+background: linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
+
+background: -moz-linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
+
+background: -webkit-linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243185", endColorstr="#12CFF3", GradientType=1 );;
+        }
+        .h{
+            border: 2px solid rgb(35, 126, 195);
+            color: rgb(35, 126, 195);
+            background-color: azure;
+            margin-top: 10px;
+            height:20px;
+            width:120px;
+            margin-left:80px;
+            border-radius: 25px;
+            padding:5px 5px 5px 25px;   
+        }
+        .c1{
+            border: 2px solid rgb(1, 2, 10);
+            background-color: aliceblue;
+            border-radius: 60px;
+            height: 150px;
+            width:120px;
+            margin-left:90px;
+        }
+        img{
+            border-radius: 60px;
+            height: 150px;
+            width: 120px;
+        }
+        .p1{
+            margin-left: 83px;
+        }
+        .p2{
+            margin-left: 83px;
+        }
+        .p3{
+            margin-left: 83px;
+        }
+        .p4,.p5{
+            margin-left: 83px;
+        }
+        .md2{
+            border: 2px solid rgb(35, 126,195);
+            height: 181px;
+            border-radius: 60px;
+            background-color: aliceblue;
+        }
+</style>
+</head>
+<body>
+    <div id="div1">
+    <form>
+        <h1>Form</h1>
+        <label for="frst">Firstname:</label>
+        <input type="text" id="id1" placeholder="First name"><br>
+        <br>
+        <label for="last">Lastname:</label>
+        <input type="text" id="id2" placeholder="Last name">
+        <br><br>
+        <label for="last">Branch:</label>
+        <input type="text" id="id3">
+        <br><br>
+        <label >Mobile number:</label>
+        <input type="number" id="id4" placeholder="enter a mobile no" required>
+        <br><br>
+        <label >Blood Group:</label>
+        <input type="text" id="id5" placeholder="enter your blood group">
+        <br><br>
+        <label for="birthday">Date of birth:</label>
+        <input type="date" id="id6" name="birthday"><br><br>
+        <input type="file" id="image"><br>
+        <input type="submit">
+  
+    </form>
+    
+</div>
+<br><br>
+
+    <div class="md">
+        <h5 class="h" >1OOOO CODERS</h5>
+        <div class="c1">
+            <img id="img">
+        </div>
+        <div class="md2">
+            
+        
+         <p class="p1" ></p>
+         <p class="p2" ></p>
+         <p class="p3" ></p>
+         <p class="p4" ></p>
+         <p class="p5"></p>
+     </div>
+     
+     </div>
+    <script>
+        let form = document.getElementsByTagName("form")
+        form[0].addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let img = document.createElement("img");
+            img.setAttribute("src", `${img}`); 
+
+            let id1 = document.getElementById("id1");
+            let id2 = document.getElementById("id2");
+            let id3 = document.getElementById("id3");
+            let id4 = document.getElementById("id4");
+            let id5 = document.getElementById("id5");
+            result = id1.value + "." + id2.value;
+            let p = document.getElementsByTagName("p")
+            p[0].innerHTML = `Name:${result}`;
+            p[1].innerHTML = `Branch:${id3.value}`;
+            p[2].innerHTML = `Mobile no:${id4.value}`;
+            p[3].innerHTML = `Blood Group:${id5.value}`;
+            p[4].innerHTML = `Date of birth:${id6.value}`;
+
+            imginput = document.getElementById("image");
+            img = document.getElementById("img")
+            img.src=URL.createObjectURL(imginput.files[0])
+
+        })
+    </script>
+
+</body>
+</html>

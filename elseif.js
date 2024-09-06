@@ -1,4 +1,4 @@
-//               *   else-if statements  *        //
+5//               *   else-if statements  *        //
 // taxi ride:
 
 let ride = 40;
@@ -36,3 +36,21 @@ else if(discount>20){
 else{
     console.log("invalid")
 }
+function Palindrome(str) {
+    let a = str.length - 1
+    for (let i = 0; i < str.length/2 ; i++) {
+        if (str[i] != str[a]) {
+            return false;
+        }
+        a--;
+    }
+    return true;
+}
+ 
+let str1 = "racecar";
+let str2 = "121";
+let str3 = "12321";
+ 
+console.log(Palindrome(str1));
+console.log(Palindrome(str2));
+console.log(Palindrome(str3));

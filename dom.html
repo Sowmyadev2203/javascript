@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        /* height: 50vh;
+        width: 50vw; */
+      }
+   
+    </style>
+  </head>
+  <body>
+    <button id="btn">add me</button>
+
+    <div id="div1">
+        <p></p>
+    </div>
+    <script>
+     
+
+   
+      let imgsrc=[
+        
+        {
+            name:"rakesh",
+            title:"no1",
+            image:"man.jpeg",
+            description:"hi ni need a job"
+        },
+        {
+            name:"ravi",
+            title:"no2",
+            image:"man1.jpg",
+            description:"hi ni need money"
+        },
+        {
+            name:"rajesh",
+            title:"no3",
+            image:"mybg.jpg",
+            description:"hi ni need more money"
+        }
+
+      ];
+      let btn = document.getElementsByTagName("button");
+      btn[0].addEventListener("click", () => {
+       
+        let imgIndex = Math.floor(Math.random() * imgsrc.length);
+       
+        let div1 = document.getElementById("div1");
+        let img = document.createElement("img");
+        img.setAttribute("src", `${imgsrc[imgIndex].image}`);
+        // div1.innerHTML=<img src=${imgsrc[imgIndex]} height="350" width="270">
+
+        img.style.height = "100px";
+        img.style.width = "100px";
+        let x1=document.createElement("p");
+        x1.innerText=`${imgsrc[imgIndex].title}`;
+        let x2=document.createElement('p')
+         x2.innerHTML=`${imgsrc[imgIndex].name}`;
+         let x3=document.createElement("p")
+         x3.innerHTML=`${imgsrc[imgIndex].description}`;
+        let subdiv=document.createElement("div");
+        subdiv.style.border="2px solid blue"
+        subdiv.appendChild(img);       
+        subdiv.appendChild(x1);
+        subdiv.appendChild(x2)
+        subdiv.appendChild(x3)
+        subdiv.style.display="flex";
+        subdiv.style.flexDirection="column"
+       
+        div1.appendChild(subdiv)
+
+      });
+
+    </script>
+  </body>
+</html>`

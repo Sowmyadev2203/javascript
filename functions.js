@@ -1,14 +1,14 @@
 //even numbers
-function f_name() {
-    let j = 0;
-    for (i = 1; i <= 100; i++) {
-        if (i % 2 == 0) {
-            j = j + i;
-        }
-    }
-    console.log(j);
-}
-console.log(f_name())
+// function f_name() {
+//     let j = 0;
+//     for (i = 1; i <= 100; i++) {
+//         if (i % 2 == 0) {
+//             j = j + i;
+//         }
+//     }
+//     console.log(j);
+// }
+// console.log(f_name())
 
 
 // function calculator() {
@@ -37,3 +37,25 @@ console.log(f_name())
 //     alert("The result is: " + result);
 // }
 // console.log(calculator())
+
+// function Palindrome(str) {
+//     for ( i = 0; i < str.length ; i++) {
+//         if(str[i] == str[str.length-i-1]){
+//             return "is a palindrome";
+//         }
+//         else{
+//             return "is not a palindrome";
+//         }
+            
+//     }
+// }
+// let str="racecar";
+// console.log(Palindrome(str))
+
+function demo(){
+    // let str1 = "something"
+    str1 = str.toUpperCase()
+    return str1;
+}
+let str1 = "something"
+demo(str1)

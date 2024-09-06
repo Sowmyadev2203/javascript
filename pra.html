@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+    <input type="file" id="ip1">
+    <input type="submit">
+</form>
+    <img id="p1"></img>
+    <script>
+        let form = document.getElementById("myform");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            let img = document.getElementById("p1");
+            let ip1 = document.getElementById("ip1");
+            console.log(ip1.files[0]);
+            const reader = new FileReader();
+            //creating one reader object from file reader constructor
+            reader.readAsDataURL(ip1.files[0])
+            //in reader object, we have readasdataurl method to fetch the url of the image
+
+            reader.addEventListener("load",(e)=>{
+                img.setAttribute("src",e.target.result);
+                img.setAttribute("height","200")
+        });
+   });
+    </script>
+</body>
+</html>
