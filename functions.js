@@ -1,61 +1,62 @@
 //even numbers
-// function f_name() {
-//     let j = 0;
-//     for (i = 1; i <= 100; i++) {
-//         if (i % 2 == 0) {
-//             j = j + i;
-//         }
-//     }
-//     console.log(j);
-// }
-// console.log(f_name())
-
-
-// function calculator() {
-//     let num1 = +prompt("Enter the first value");
-//     let num2 = +prompt("Enter the second value");
-//     let operator = prompt("Enter the operator");
-//     let result;
-//     if (operator == "+") {
-//         result = num1 + num2;
-//     } else if (operator == "-") {
-//         result = num1 - num2;
-//         if (num2 > num1 && operator == "-") {
-//             result = num2 - num1;
-//         }
-//     } else if (operator == "%") {
-//         result = num1 % num2;
-//     } else if (operator == "/") {
-//         result = num1 / num2;
-//     } else if (operator == "*") {
-//         result = num1 * num2;
-//     } else {
-//         alert("Invalid operator");
-//         result = "undefined";
-//     }
-
-//     alert("The result is: " + result);
-// }
-// console.log(calculator())
-
-// function Palindrome(str) {
-//     for ( i = 0; i < str.length ; i++) {
-//         if(str[i] == str[str.length-i-1]){
-//             return "is a palindrome";
-//         }
-//         else{
-//             return "is not a palindrome";
-//         }
-            
-//     }
-// }
-// let str="racecar";
-// console.log(Palindrome(str))
-
-function demo(){
-    // let str1 = "something"
-    str1 = str.toUpperCase()
-    return str1;
+function f_name() {
+  let j = 0;
+  for (i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+      j = j + i;
+    }
+  }
+  console.log(j);
 }
-let str1 = "something"
-demo(str1)
+console.log(f_name());
+//o/p:2550
+
+function Palindrome(str) {
+  for (i = 0; i < str.length; i++) {
+    if (str[i] == str[str.length - i - 1]) {
+      return "is a palindrome";
+    } else {
+      return "is not a palindrome";
+    }
+  }
+}
+let str = "racecar";
+console.log(Palindrome(str));
+//o/P:is a palindrome
+
+first = function (a, b) {
+  return a + b;
+};
+console.log(first(1, 2));
+//output:3
+
+let first1_to_10 = function (a) {
+  for (i = 0; i <= a; i++) {
+    console.log(i);
+  }
+};
+first1_to_10(10);
+//output
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+
+let factorials = (a) => {
+  for (i = 1; i <= a; i++) {
+    fact = fact * i;
+    console.log(fact);
+  }
+};
+fact = 1;
+input = 5;
+factorials(5);
+//output:120
+

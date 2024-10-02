@@ -99,6 +99,8 @@ do{
     s4--;
 }while(s4>=1);
 
+// output : 18
+
 
 //to find product of of all numbers from 1 to 12
 let s5 = 1;
@@ -108,6 +110,7 @@ do{
     s5++;
 }while(s5<=12);
 console.log(product)
+//output : 15
 
 // to print reverse order from 20 to 1
 let s6 = 20;
@@ -116,6 +119,7 @@ do{
     s6 = s6-2;   
 }
 while(s6>=1);
+//output : 12
 
 //                                            while loop :
 
@@ -127,6 +131,7 @@ while(s7<=20){
     }
     s7++;
 }
+// output : 9
 // printing the sum of numbers from 1 to 30 divisible by 4
 let s8 = 0;
 let sum = 0;
@@ -137,6 +142,8 @@ while(s8<=30){
     s8++; 
 }
 console.log(sum);
+//output: 6
+
 // printing numbers from 50 to 1
 let s9 = 50;
 while(s9>=1){
@@ -146,6 +153,7 @@ while(s9>=1){
     s9--;
     
 }
+//output : 3
 
     
 

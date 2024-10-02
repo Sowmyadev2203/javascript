@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form id="myform">
+        <input type="file" id="ip1">
+        <input type="submit">
+        </form>
+
+        <img id="p1"> -->
+
+
+        <!-- <div id="div1"> -->
+        <!-- <button id="btn" onclick="demo1()" ondblclick="dclk()" onmousedown="mover()">click me</button>
+        <h1 id="p1"></h1> -->
+    <!-- </div> -->
+        <script>
+
+            //----------------------------------   file upload code -------------------------------------------
+
+            // let form = document.getElementById("myform");
+            // form.addEventListener("submit",(e)=>{
+            //     e.preventDefault();
+            //     let img = document.getElementById("p1")
+            //     let ip1 = document.getElementById("ip1");
+            //     console.log(ip1.files[0]);
+            //     const reader = new FileReader();
+            //     //creating one rerader object from filereader constructor
+
+            //     // adding load event,once reader is loaded with url then image can be set with attribute
+            //     //image url can be get from e.target.result
+            //     reader.onload=(e)=>{
+            //         img.setAttribute("src",e.target.result);
+            //         img.setAttribute("height","200")
+            //         console.log(e.target.result)
+            //     };
+            //     reader.readAsDataURL(ip1.files[0]);
+            //     // in reader object , we have readasurl method to fetch the url of the image
+            // });
+
+            //-----------------------------------------   events[ inline event] -----------------------------------
+
+        //    function demo1(){
+        //     document.body.style.backgroundColor="green"
+        //    }
+        //    function dclk() {
+        //     document.body.style.backgroundColor="pink"
+        //    }  
+        //    function mover() {
+        //     let h1 = document.getElementById("p1")
+        //     h1.innerHTML="hello"
+        //    } 
+        
+        //--------------------------------- call method ----------------------------------------------//
+
+        let theatre = {
+            hero:"prabas",
+            movieName:"kalki",
+            screen:"screen-1",
+            play:function(x,y){
+                console.log(`movie-${this.hero} 's movie ${this.movieName} is playing in ${this.screen} ${x} ${y}`)
+            }
+
+        }
+        let three={
+            hero:"dhanush",
+            movieName:"three",
+            screen:"screen-2",
+        }
+        let oye={
+            hero:"sid",
+            movieName:"oye",
+            screen:"screen-3",
+        }
+        // theatre.play("running")
+        // theatre.play.call(three,"running")
+        // theatre.play.apply(oye,["but completed"])
+
+        let threeobj = theatre.play.bind(three," is running");
+        // threeobj()
+        console.log("hi welcome");
+        threeobj(" 5 shows");
+        threeobj(" 9 shows")
+            
+
+        </script>
+
+</body>
+</html>

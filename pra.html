@@ -28,6 +28,33 @@
                 img.setAttribute("height","200")
         });
    });
+
+
+
+   let rows = +prompt("enter a number:");
+for (i = 0; i < rows; i++) {
+  (res = " "), (alpha = 65);
+  for (j = 1; j <= rows - i; j++) {
+    res = res + String.fromCharCode(alpha);
+    alpha++;
+  }
+  for (k = 1; k <= 2 * i - 1; k++) {
+    res = res + " ";
+  }
+  if (i == 0) {
+    console.log(
+      res +
+        res
+          .slice(0, res.length - 1)
+          .split("")
+          .reverse()
+          .join("")
+    );
+  } else {
+    console.log(res + res.split("").reverse().join(""));
+  }
+}
+
     </script>
 </body>
 </html>

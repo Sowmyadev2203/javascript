@@ -10,21 +10,20 @@
         height: 50vh;
         width: 50vw;
         text-align: center;
+        margin:100px 0px 0px 200px;
     }
     .md{
+            display: none;
             border: 5px solid rgb(199, 169, 169);
             border-radius: 15px;
             height: 55vh;
             width: 20vw;
+            margin:100px 0px 0px 400px ;
             background-color: hsla(232, 57%, 33%, 1);
-
-background: linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
-
-background: -moz-linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
-
-background: -webkit-linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243185", endColorstr="#12CFF3", GradientType=1 );;
+            background: linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
+            background: -moz-linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
+            background: -webkit-linear-gradient(45deg, hsla(232, 57%, 33%, 1) 14%, hsla(190, 90%, 51%, 1) 64%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243185", endColorstr="#12CFF3", GradientType=1 );;
         }
         .h{
             border: 2px solid rgb(35, 126, 195);
@@ -73,7 +72,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243185", en
 <body>
     <div id="div1">
     <form>
-        <h1>Form</h1>
+        <h1>Form for Idcard</h1>
         <label for="frst">Firstname:</label>
         <input type="text" id="id1" placeholder="First name"><br>
         <br>
@@ -97,9 +96,13 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243185", en
     </form>
     
 </div>
-<br><br>
 
-    <div class="md">
+
+
+ <br><h2 style="margin-left: 200px;">YOUR ID CARD: </h2>
+
+
+    <div class="md" id="idCard" >
         <h5 class="h" >1OOOO CODERS</h5>
         <div class="c1">
             <img id="img">
@@ -138,6 +141,9 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243185", en
             imginput = document.getElementById("image");
             img = document.getElementById("img")
             img.src=URL.createObjectURL(imginput.files[0])
+
+
+            document.getElementById("idCard").style.display = "block";
 
         })
     </script>
