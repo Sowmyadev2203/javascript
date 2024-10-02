@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        img{
-            height: 200px;
-            margin-top: 30px; 
-            border-radius: 30px;  
-        }
-        .div1{
-            border: 2px solid black;
-            text-align: center;
-            height: 500px;
-            width: 500px;
-        }
-        
-    </style>
-</head>
-<body>
-<div class="div1">
-    <img id="myimg">
-    <h1></h1>
-    <p></p>
-</div>
-    <script>
-        let div = document.createElement('div');
-        // div.className = 'div1';
-        // document.body.appendChild(div);
-        img = document.getElementById("myimg");
-        img.src = "ganapathi.webp";
-        h1 = document.getElementsByTagName("h1");
-        h1[0].innerHTML = "HAPPY VINAYAKA CHATHURDHI";
-        p = document.getElementsByTagName("p");
-        p[0].innerHTML = "Wishing you and your family a blessed Ganesh Chaturthi filled with love and laughter";
-        
+      img {
+        height: 200px;
+        margin-top: 30px;
+        border-radius: 30px;
+      }
+      .div1 {
+        border: 2px solid red;
+        border-radius: 50px;
+        text-align: center;
+        height: 500px;
+        width: 500px;
+        /* background-color: yellowgreen; */
+        background: hsla(48, 78%, 82%, 1);
 
+        background: linear-gradient(
+          135deg,
+          hsla(48, 78%, 82%, 1) 0%,
+          hsla(340, 87%, 59%, 1) 100%
+        );
+
+        background: -moz-linear-gradient(
+          135deg,
+          hsla(48, 78%, 82%, 1) 0%,
+          hsla(340, 87%, 59%, 1) 100%
+        );
+
+        background: -webkit-linear-gradient(
+          135deg,
+          hsla(48, 78%, 82%, 1) 0%,
+          hsla(340, 87%, 59%, 1) 100%
+        );
+
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F5E6AD", endColorstr="#F13C77", GradientType=1 );
+      }
+      img:hover {
+        transition: all 0.86s;
+        transform: rotateY(360deg);
+      }
+      p{
+        color:black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <br />
+      <marquee direction="left">💐 Happy Vinayak Chathurdhi 💐 Happy Vinayak Chathurdhi 💐 Happy Vinay
+        Chathurdhi 💐 Happy Vinayak Chathurdhi 💐 Happy Vinayak Chathurdhi 💐
+        </marquee><br />
+      <img id="myimg" />
+      <h1 style="color:rgba(234, 9, 9, 0.728)"></h1>
+      <p></p>
+    </div>
+    <script>
+      let div = document.createElement("div");
+      img = document.getElementById("myimg");
+      img.src = "ganapathi.webp";
+      h1 = document.getElementsByTagName("h1");
+      h1[0].innerHTML = "HAPPY GANESH CHATHURDHI";
+      p = document.getElementsByTagName("p");
+      p[0].innerHTML =
+        "Wishing you and your family a blessed Ganesh Chaturthi filled with love and laughter";
     </script>
-</body>
+  </body>
 </html>
