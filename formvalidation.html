@@ -55,41 +55,41 @@
     </form>
 
     <script>
-        // Validate Roll Number
+        
         function validateRollNumber(rollNumber) {
             const pattern = /^\d{2}[a-z]\d{2}[A-Z]{3}$/;
             return pattern.test(rollNumber);
         }
 
-        // Validate Username (only alphabets)
+        
         function validateUsername(username) {
             const pattern = /^[A-Za-z]+$/;
             return pattern.test(username);
         }
 
-        // Validate Mobile Number (exactly 10 digits)
+        
         function validateMobileNumber(mobileNumber) {
             const pattern = /^\d{10}$/;
             return pattern.test(mobileNumber);
         }
 
-        // Validate Password (at least 8 characters, with uppercase, lowercase, and digit)
+        
         function validatePassword(password) {
             const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
             return pattern.test(password);
         }
 
-        // Event listener for form submission
+        
         document.getElementById('admissionForm').addEventListener('submit', function(event) {
-            event.preventDefault();  // Prevent the form from submitting until validation is done
+            event.preventDefault();  
 
-            // Get input values
+            
             const rollNumber = document.getElementById('rollNumber').value;
             const username = document.getElementById('username').value;
             const mobileNumber = document.getElementById('mobileNumber').value;
             const password = document.getElementById('password').value;
 
-            // Clear previous error messages
+            
             document.getElementById('rollNumberError').textContent = '';
             document.getElementById('usernameError').textContent = '';
             document.getElementById('mobileNumberError').textContent = '';
@@ -97,34 +97,34 @@
 
             let isValid = true;
 
-            // Validate Roll Number
+            
             if (!validateRollNumber(rollNumber)) {
                 document.getElementById('rollNumberError').textContent = 'Invalid roll number format (e.g., 23g21ABC).';
                 isValid = false;
             }
 
-            // Validate Username
+           
             if (!validateUsername(username)) {
                 document.getElementById('usernameError').textContent = 'Username should only contain alphabets.';
                 isValid = false;
             }
 
-            // Validate Mobile Number
+           
             if (!validateMobileNumber(mobileNumber)) {
                 document.getElementById('mobileNumberError').textContent = 'Mobile number should contain exactly 10 digits.';
                 isValid = false;
             }
 
-            // Validate Password
+            
             if (!validatePassword(password)) {
                 document.getElementById('passwordError').textContent = 'Password must be at least 8 characters, with at least one uppercase letter, one lowercase letter, and one digit.';
                 isValid = false;
             }
 
-            // If all validations pass
+            
             if (isValid) {
                 alert('Form submitted successfully!');
-                // You can add code here to submit the form, for example, using AJAX.
+                
             }
         });
     </script>
