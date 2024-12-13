@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            display: grid;
+            border: 1px solid black;
+            height: 250px;
+            width: 120px;
+            padding: 30px;
+            background-color: rgb(51, 48, 48);
+            color: aliceblue;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <br><br> -->
+    <div id="div1"> 
+        <p>OTP Generator</p>
+        <button id="btn">Generate OTP</button>
+        <p>your otp is :</p>    
+        <p id="p1" style="background-color: dimgray;"></p>
+        <p id="p2" style="background-color: dimgray;"></p>
+
+</div>
+<script>
+    let btn = document.getElementById("btn")
+    btn.style.backgroundColor="#ff33a5"
+    btn.style.color="white"
+    btn.addEventListener("click",()=>{
+        let x=Math.random();
+        let random = Math.floor((x*99999+10000));
+        let p = document.getElementById("p1")
+        let p2 = document.getElementById("p2")
+        p.innerHTML=random;
+        p.style.color="#ff335a";
+        let div=document.getElementById("div1")
+        if(random%2==0){
+            p2.innerHTML="OTP is Even"
+        }
+        else{
+            p2.innerHTML="OTP is Odd"
+        }
+        
+    })
+</script>
+</body>
+</html>
